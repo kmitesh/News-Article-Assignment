@@ -1,0 +1,146 @@
+
+/* setting the default font color, font-family */
+body {
+  font-family: IBM Plex Serif, Playfair Display;
+  color: #fff;
+  box-sizing: border-box;
+  background-color: #e6e6e6;
+}
+
+
+/* removing default margin */
+* {
+  margin: 0px;
+}
+
+
+/* setting the container grid layout and flexbox layout */
+.container{
+  margin:0px 10%;
+  display:flex;
+  flex-direction: column;
+}
+
+section{
+  color: #000000;
+  margin-top:23px;
+}
+
+/* giving the header height, width and background color */
+#header{
+  background-color: #80192c;
+  height: 60px;
+  width:100%;
+}
+
+/* targetting the h1 tag and giving its font size */
+header h1{
+padding:0px;
+font-size: 45px;
+padding-left: 10px;
+
+}
+
+
+/* using flexbox */
+.contianer{
+  display:flex;
+}
+
+
+article #name{
+  font-size: 23px;
+  font-weight: lighter;
+  color: #80192c;
+  margin-top:15px;
+}
+
+article h2{
+  font-size: 24px;
+  margin-top:3px;
+  color: #363535;
+}
+
+
+article #article_info{
+  font-size: 18px;
+  margin-top:15px;
+  color: #363636;
+}
+
+/* setting the image max width and height dimension */
+#image_1{
+  max-height: 700px;
+  max-width: 700px;
+}
+
+.profile-pic{
+  max-height:300px;
+  max-width:200px;
+}
+
+
+
+/* adding responsiveness to an image */
+.responsive {
+  width: 100%;
+  height:auto;
+  margin: auto;
+
+}
+
+.icon{
+  width:25px;
+  height:25px;
+}
+
+
+/* hiding the element from the page */
+#article_8{
+  display:none;
+}
+
+
+
+/* defined flex to a footer and adjusting its content to be at the center on smaller screen devices*/
+#footer{
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d7d9d7;
+  margin-top: 15px;
+  height:100px;
+
+}
+
+#footer ul li{
+  list-style-type: none;
+  text-align: center;
+  line-height: 2;
+  text-decoration: none;
+  padding:0px;
+  margin:0px;
+
+}
+
+#footer ul li a{
+  text-decoration:none;
+  color: #858585;
+  font-size: 14px;
+}
+
+
+/* when the mouse pointer is over the li>a tags it will change it color and font size. Thus creating a hover effect/simple animation */
+#footer ul li a:hover{
+  text-decoration:none;
+  color: #9c2d36;
+  font-size: 12px;
+}
+
+/* removing the left-indentation constantly across all browsers by setting both padding and margin to "0" */
+#footer ul{
+  padding:0px;
+  margin:0px;
+
+}

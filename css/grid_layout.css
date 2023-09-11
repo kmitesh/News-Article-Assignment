@@ -1,0 +1,276 @@
+
+/* created one column grid layout */
+.container{
+  display:grid;
+  grid-template-rows: repeat(9, minmax(100px 1fr));
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "header"
+  "aside"
+  "article_1"
+  "article_2"
+  "article_3"
+  "article_4"
+  "article_5"
+  "article_6"
+  "article_7"
+  "footer"
+}
+
+
+header{
+  /* giving the grid area name for each section*/
+  grid-area: header;
+}
+
+aside{
+  grid-area: aside;
+}
+
+#article_1{
+  grid-area: article_1;
+}
+
+#article_2{
+  grid-area: article_2;
+}
+
+#article_3{
+  grid-area: article_3;
+}
+
+#article_4{
+  grid-area: article_4;
+}
+
+#article_5{
+  grid-area: article_5;
+}
+
+#article_6{
+  grid-area: article_6;
+}
+
+#article_7{
+  grid-area: article_7;
+}
+
+footer{
+  grid-area:footer;
+}
+
+#image_1{
+  margin-top:10px;
+}
+
+/* Targetting Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {
+  header h1{
+    text-align: center;
+  }
+
+
+}
+
+/* Targetting Medium devices (landscape tablets, 768px and up) */
+@media(min-width: 768px){
+.container{
+  margin:0px 4%;
+  display:grid;
+  grid-gap:20px;
+  grid-template-rows: 60px repeat(3, 400px) 100px;
+  grid-template-columns: repeat(3, minmax(100px, 1fr)); /* defining three column layout with minimum 100px and maximum of 1fr */
+  grid-template-areas: /* arranging the content using grid-template-areas */
+  "header header header"
+  "article_1 aside aside"
+  "article_2 article_3 article_4"
+  "article_5 article_6 article_7"
+  "footer footer footer"
+}
+section{
+  color: #000000;
+  margin-top:0px;
+}
+
+/* targetting the article tag with an id "name" */
+article #name{
+  font-size: 23px;
+  color: #80192c;
+  margin-top: 0px;
+  font-weight: bold;
+}
+
+
+article h2{
+  font-size: 28px;
+}
+
+article #article_info{
+  font-size: 17px;
+}
+
+
+/* targetting the class name with topic to set a font size*/
+.topic{
+  font-size: 22px;
+}
+
+/* hiding the information in an html document and taking up the space */
+#article_4 #article_info{
+  display:none;
+}
+
+#article_4 #image_1{
+  margin-top:20px;
+  width:83%;
+  height:100%;
+}
+
+
+/* giving the image maxium height and width */
+#image_1{
+  margin-top:0px;
+  max-height: 500px;
+  max-width: 97%;
+}
+
+/* using flex-start to align the content of the footer at the start */
+#footer{
+  margin-top:25px;
+  color:#636363;
+  justify-content: flex-start;
+  height:60px;
+}
+
+
+/* defining the flexbox layout */
+#navbar_links{
+  display:flex;
+}
+
+
+/* targetting the li tags with space on the left */
+#footer ul li{
+  margin-left: 25px;
+
+}
+
+}
+
+/* at 900px width targetting three elements to have a margin-top property of 50px; */
+@media(min-width:900px){
+  #article_2,#article_3,#article_4{
+    margin-top:20px;
+  }
+
+  /* targetting the article tag with an id "name" */
+  article #name{
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+
+  article h2{
+    font-size: 30px;
+  }
+
+  article #article_info{
+    font-size: 18px;
+  }
+}
+
+
+/* Extra large devices (large laptops and desktops, 992px and up) */
+@media(min-width: 992px){
+  .container{
+    display:grid;
+    grid-template-rows: 60px repeat(2, 1fr) 100px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    "header header header header"
+    "article_1 aside aside article_8"
+    "article_2 article_3 article_5 article_6"
+    "footer footer footer footer"
+  }
+
+  article #name{
+    font-size: 25px;
+    font-weight:bold;
+
+  }
+
+  article h2{
+    font-size: 32px;
+  }
+
+  #article_2,#article_3,#article_4{
+    margin-top: 0px;
+  }
+
+/* displaying this section at 1200px or wider */
+#article_8{
+  display:block;
+}
+
+
+/* hiding the content at 1200px or on wider screen */
+#article_7, #article_4{
+  display:none;
+}
+
+
+/* targetting the class name with person_info */
+.person_info{
+  display:none;
+}
+
+
+/* giving the body view port height to 100vh so that we can force the footer to stick at the bottom of the page */
+body{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+
+/* footer is now the flexbox item so that using margin-top property it will force to stick at the bottom of the html page */
+#footer{
+  margin-top:auto;
+}
+
+
+}
+
+
+/* css media break points and 1500px and above */
+@media(min-width:1500px){
+  .container{
+    margin: 0px 15%;
+  }
+
+  /* targetting the article tag with an id "name" */
+  article #name{
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+
+  article h2{
+    font-size: 32px;
+  }
+
+  article #article_info{
+    font-size: 20px;
+  }
+
+  #article_2,#article_3,#article_5,#article_6{
+    margin-top:50px;
+  }
+
+  #footer{
+    height:60px;
+  }
+
+
+
+}
